@@ -1,13 +1,178 @@
+/*
+ * Default index.css values
+ */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/*
+ * App styling
+ */
+
+.App {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+ * Header styling
+ */
+
+.header {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: dimgrey;
+}
+
+.logo {
+    margin: 0.2%;
+    height: 80%;
+}
+
+.settings-icon {
+    margin-right: 0.5%;
+    height: 100%;
+    cursor: pointer;
+}
+
+@keyframes settings-icon-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .settings-icon:hover {
+        animation: settings-icon-spin infinite 10s linear;
+    }
+}
+
+/*
+ * Workspace styling
+ */
+
+.workspace {
+    height: 92.5%;
+    width: 100%;
+    background-color: black;
+}
+
+.entry-selection {
+    width: 20%;
+    background-color: #ccc;
+    overflow: hidden auto;
+}
+
+.entry-search {
+    height: 5%;
+    width: 100%;
+    background-color: grey;
+    vertical-align: middle;
+}
+
+.entry-search input {
+    height: 50%;
+    width: 15%;
+    margin-top: 0.5%;
+    margin-left: 1%;
+}
+
+.entry-search button {
+    height: 75%;
+    width: 5%;
+    margin-left: 4%;
+    font-size: 1.5vmin;
+    vertical-align: middle;
+}
+
+.entry-container {
+    height: 88.225vh;
+    width: 60%;
+    background-color: darkgrey;
+    overflow: hidden scroll;
+}
+
+.entry-input {
+    height: 88.225vh;
+    width: 40%;
+    background-color: darkgrey;
+}
+
+/*
+ * Entry styling
+ */
+
+.entry {
+    background-color: #f0f0f0;
+    margin: 1vmax;
+    padding: 0 1vmax;
+    border: 0.2vw solid lightslategrey;
+    border-radius: 1vmax;
+    width: 40%;
+}
+
+.entry-word {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.entry-delete {
+    color: red;
+    cursor: pointer;
+}
+
+.entry-delete:hover {
+    color: #dd2222;
+}
+
+.entry-definition {
+    max-height: 15vh;
+    overflow: hidden auto;
+    margin: 1%;
+    border-left: 0.25vw solid grey;
+    padding: 0.25vw;
+}
+
+.entry-source {
+    font-style: italic;
+}
+
+/*
+ * Footer styling
+ */
+
+.footer {
+    height: 2.5%;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+.copyright {
+    margin-left: 0.5%;
 }
